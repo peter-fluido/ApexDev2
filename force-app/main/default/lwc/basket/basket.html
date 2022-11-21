@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title={title} icon-name="standard:webcart">
+        <div class="slds-m-around_medium">
+            <template for:each={products} for:item="product">
+                <p key={product.fields.Id.value}>{product.fields.Name.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
