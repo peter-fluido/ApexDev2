@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Publisher Component">
+        <div class="slds-p-horizontal_small">
+            <lightning-input
+                type="text"
+                variant="standard"
+                label="Enter text"
+                name="myTextInput"
+                onchange={handleChange}
+            ></lightning-input>
+            <lightning-button onclick={displayTexts} label="Send">Send</lightning-button>
+        </div>
+    </lightning-card>
+</template>
