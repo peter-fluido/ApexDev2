@@ -22,15 +22,15 @@ export default class Detail extends LightningElement {
         this.product = bikes.find((bike) => bike.fields.Id.value === value);
     }
 
+    // getter for productId
+    @api get productId() {
+        return this._productId;
+    }
+
     handleAddToCart() {
         // Fire message on channel
         console.log("Sending!", this.product.fields.Id.value);
         const payload = { data: this.product.fields.Id.value };
         publish(this.messageContext, SampleMessageChannel, payload);
-    }
-
-    // getter for productId
-    @api get productId() {
-        return this._productId;
     }
 }
