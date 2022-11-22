@@ -1,6 +1,7 @@
 <template>
     <template if:true={product}>
         <div class="container">
+            <!--       <div class="slds-text-heading_small">{product.fields.Name.value}</div> -->
             <div>{product.fields.Name.value}</div>
             <div class="price">{product.fields.MSRP__c.displayValue}</div>
             <div class="description">{product.fields.Description__c.value}</div>
